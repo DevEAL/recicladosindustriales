@@ -4,14 +4,8 @@
   # Verificando si existe o no la cookie
   if(!isset($_COOKIE["mostrarModal"]))
   {
-    # Caso no exista la cookie entra aquí
-    # Creamos la cookie con la duración que queramos
 
-    //$expirar = 3600; // muestra cada 1 hora
-    //$expirar = 10800; // muestra cada 3 horas
-    //$expirar = 21600; //muestra cada 6 horas
     $expirar = 43200; //muestra cada 12 horas
-    //$expirar = 86400;  // muestra cada 24 horas
     setcookie('mostrarModal', 'SI', (time() + $expirar)); // mostrará cada 12 horas.
     # Ahora nuestra variable de control pasará a tener el valor TRUE (Verdadero)
     $exibirModal = true;
@@ -19,7 +13,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<!-- IE Compatibility Meta -->
@@ -87,7 +81,7 @@
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#product">Materiales</a></li>
+							<li><a href="#product">Materiales Granulares</a></li>
 							<li><a href="#prefabricados">Prefabricados</a></li>
 						</ul>
 					</li>
@@ -113,10 +107,10 @@
 					<div class="container">
 						<div class="row atention">
 							<div class="col-md-offset-4 col-md-8">
-								<h2>Usamos sus <span>residuos de construcción</span> para promover el <span>desarrollo de ciudades sostenible</span></h2>
+								<h2>Usamos sus <span>residuos de construcción</span> para promover el <span>desarrollo de ciudades sostenibles</span></h2>
 							</div>
 							<div class="col-md-offset-4 col-md-8 btn-cotizar">
-								<button class="btn" role="button" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</button>
+								<button class="btn btn-cot-home" role="button" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</button>
 							</div>
 						</div>
 						<div class="scroll">
@@ -228,7 +222,7 @@
 							<h3>BASE GRANULAR<br>TIPO C BG-C</h3>
 						</div>
 						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal6">Ver Ficha</a></p>
+							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal3">Ver Ficha</a></p>
 							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
 						</div>
 					</div>
@@ -282,7 +276,7 @@
 					<div class="item">
 						<img src="images/IMGS_SLIDER_PRODUCTOS/B_200.jpg" alt="">
 						<div class="cont_title">
-							<h3>B 200</h3>
+							<h3>MATERIAL GRANULAR DE MEJORAMIENTO</h3>
 						</div>
 						<div class="cont_buttom">
 							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
@@ -401,11 +395,11 @@
 				</div>
 				<div class="col-sm-12 col-md-7 list wow fadeInLeft" data-wow-duration="2s">
 					<ul>
-						<li><span><img src="images/icon_list.png" alt=""></span> Excelente ubicación de nuestras plantas.</li>
-						<li><span><img src="images/icon_list.png" alt=""></span> Ahorros en tiempos de desplazamientos, cargues de material, descargues de escombros, filas y demoras.</li>
-						<li><span><img src="images/icon_list.png" alt=""></span> Reducción de la explotación de recursos naturales como minas y canteras.</li>
-						<li><span><img src="images/icon_list.png" alt=""></span> Disminución de la invasión de espacios públicos, vías y lotes con escombros.</li>
-						<li><span><img src="images/icon_list.png" alt=""></span> Construcción y desarrollo urbano sostenible</li>
+						<li><span><img src="images/icon_list.png" alt=""></span> Contamos con 3 plantas ubicadas estratégicamente, más cerca de sus obras</li>
+						<li><span><img src="images/icon_list.png" alt=""></span> Ahorros en tiempos de desplazamientos, mayor número de viajes de material al día</li>
+						<li><span><img src="images/icon_list.png" alt=""></span> Ahorro en tiempo de cargue del material</li>
+						<li><span><img src="images/icon_list.png" alt=""></span> Rápida disposición de los Residuos de construcción y demolición, sin filas ni demoras</li>
+						<li><span><img src="images/icon_list.png" alt=""></span> Entrega digital de las certificaciones ambientales</li>
 					</ul>
 				</div>
 			</div>
@@ -531,7 +525,7 @@
 					</div>
 
 					<!-- Articulo #5 -->
-					<div class="thumbnail contenedor">
+					<!-- <div class="thumbnail contenedor">
 						<div>
 							<img class="img-fluid" src="images/Prensa/logos/mprende.jpeg" alt="">
 							<div class="descripcion">
@@ -546,7 +540,7 @@
 						<div>
 							<a href="http://mprende.co/medio-ambiente/reciclados-industriales-una-compa%C3%B1%C3%ADa-responsable" target="_blank" target="_blank"><button class="btn btn-3">Ver más</button></a>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- Articulo #6 -->
 					<div class="thumbnail contenedor">
@@ -905,18 +899,41 @@
 	<div class="floating-wpp"></div>
 
 	<!-- footer -->
-	<div class="footer text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="copyright">
-						<p>Copyright © 2018 Todos Los Derechos Reservados. Powered By En Algún Lugar</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end footer -->
+	<img class="footer-separator" src="images/svg/footer-separator.svg" alt="">
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+				<img id="logo-reciclados" class="logo-footer" src="images/svg/reciclados-wg-logo.svg" alt="">
+                </div>
+                <div class="col-12 footer-menu">
+                    <a href="nosostros.php">Nosotros</a>
+                    <a href="#prefabricados">Prefabricados</a>
+                    <a href="#fondo_icons">Ventajas</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+                <div class="col-12 social">
+                    
+                    <a href="#"><img class="social-icon" src="images/svg/facebook-icon.svg" alt=""></a>
+                
+                    <a href="#"><img class="social-icon" src="images/svg/twitter-icon.svg" alt=""></a>
+                
+                    <a href="#"><img class="social-icon" src="images/svg/instagram-icon.svg" alt=""></a>
+                
+                    <a class="novo-footer" href="https://recicladosindustriales.co" target="_blank">
+						<span></span>
+						<img class="logo-footer" src="images/svg/novo-wg-logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-12 email">
+                    <p><a href="mailto:info@recicladosindustriales.co"><img class="email-icon" src="images/svg/mail-icon.svg" alt=""></a><a href="mailto:info@recicladosindustriales.co">info@recicladosindustriales.co</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="eal-copy">
+            <p>Copyright © 2019 All Right Reserved. <a href="http://enalgunlugarestudio.com/" target="_blank">Powered By En Algún Lugar</a></p>
+        </div>
+    </footer>
 
 	<!-- scroll-top -->
 	<div id="scroll-top">
@@ -1112,7 +1129,7 @@
 									<option value="Sub Base Tipo A SBG-B">SUB BASE GRANULAR TIPO A SBG-B</option>
 									<option value="Sub Base Tipo A SBG-C">SUB BASE GRANULAR TIPO A BG-C</option>
 									<option value="Sub Base Tipo PEA1">SUB BASE GRANULAR TIPO PEA</option>
-									<option value="B 200">B 200</option>
+									<option value="B 200">MATERIAL GRANULAR DE MEJORAMIENTO</option>
 									<option value="B 400">B 400</option>
 									<option value="B 600">B 600</option>
 									<option value="Arena">ARENA</option>
@@ -1125,11 +1142,11 @@
 							<div class="form-group" style="padding-bottom:20px;">
 								<label for="select4">Cantidad a cotizar *</label>
 								<select name="select4" class="form-control" id="select4">
-									<option value="1-50">De 1 a 49</option>
-									<option value="50-100">De 50 a 100</option>
-									<option value="100-200">De 100 a 200</option>
-									<option value="200-300">De 200 a 300</option>
-									<option value="300-500">De 300 a 500</option>
+									<option value="1-250">1 - 250 m3</option>
+									<option value="250-500">250 - 500 m3</option>
+									<option value="500-1000">500 - 1000 m3</option>
+									<option value="1000-5000">1000 - 5000 m3</option>
+									<option value=">5000">más de 5000 m3</option>
 								</select>
 							</div>
 
@@ -1138,12 +1155,12 @@
 							<p class="help-block text-danger"></p>
 							<div id="success"></div>
 							<div class="alert alert-danger error">Error!  E-mail por favor revisé su correo electrónico</div>
-							<div class="alert alert-success success">Su mensaje se ha enviado correctamente</div>
+							<div class="alert alert-success success">El mensaje se ha enviado correctamente, uno de nuestros asesores se contactará con usted lo antes posible</div>
 							<input type="submit" value="Cotizar" class="btn btn-default btn-esg" />
 							<p><br>* Campos Obligatorios</p>
 						</div>
 					</form>
-
+					
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 					</div>
@@ -1153,7 +1170,7 @@
 	</div>
 
 	<!-- ******--------- Suscribirse	---------****** -->
-	<div id="subscribe" class="modal fade" role="form">
+	<div id="subscribe-modal" class="modal fade" role="form">
 		<div class="vertical-alignment-helper">
 			<div class="modal-dialog modal-md vertical-align-center">
 				<!-- Modal content-->
@@ -1178,15 +1195,21 @@
 					<div class="modal-body">
 						<form name="subscribe" id="subscribe" novalidate>
 							<div class="col-md-12">
-								<div class="form-group">
-									<input type="email" placeholder="Email *" class="form-control" name="email" id="emailSubscribe" required data-validation-required-message="Verifique su dirección de correo">
-									<p class="help-block text-danger"></p>
+								<div class="form-group" style="margin-bottom: 1rem;">
+									<input type="email" placeholder="Email *" class="form-control" name="email" id="emailSubscribe" required  >
 								</div>
-
-								<p class="help-block text-danger"></p>
-								<div id="success"></div>
-
-								<div style="display:none;" class="alert alert-success success">Su mensaje se ha enviado correctamente</div>
+								<div id="subs-success" style="display:none;" class="alert alert-success success">
+									Su mensaje se ha enviado correctamente
+								</div>
+								<div id="subs-warning" style="display:none; " class="alert alert-warning warning">
+									Escriba su correo electronico
+								</div>
+								<div id="subs-danger" style="display:none;" class="alert alert-danger danger">
+									A sucedido un error, intente más tarde
+								</div>
+								<div id="subs-warningDos" style="display:none;" class="alert alert-warning warning">
+									Escriba un correo valido
+								</div>
 								<div class="btn-center">
 									<input type="submit" value="Enviar" class="btn btn-default btn-esg" />
 									<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -1213,17 +1236,22 @@
 	<script src="js/wow.min.js"></script>
 	<script>new WOW().init();</script>
 	<script src="chatWp/floating-wpp.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.js"></script>
 
 	<?php if($exibirModal === true) : ?>
 	<script>
 		$(document).ready(function(){
 			setTimeout(() => {
 				// id de nuestro modal
-				$("#subscribe").modal("show");
+				$("#subscribe-modal").modal("show");
 			}, 5000);
 		});
 	</script>
 	<?php endif; ?>
+
+	<script>
+		$(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+	</script>
 
 </body>
 </html>

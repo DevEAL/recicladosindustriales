@@ -37,35 +37,42 @@
 
     <!-- header -->
     <header id="main-header" class="header navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">
-                    <img src="images/logo_blanco.png" class="img-responsive pic-1" alt="logo">
-                    <img src="images/logo_blanco.png" class="img-responsive pic-2" alt="logo">
-                </a>
-            </div>
-            <nav id="myNavbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="nosotros.php">NOSOTROS </a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">PRODUCTOS
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.php#product">Materiales</a></li>
-                            <li><a href="index.php#prefabricados">Prefabricados</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="index.php#fondo_icons">VENTAJAS</a></li>
-                    <li><a href="#contact">CONTACTO</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index.php">
+					<img src="images/logo_reciclad.svg" class="img-responsive pic-1" alt="logo"> 
+					<img src="images/logo_reciclad.svg" class="img-responsive pic-2" alt="logo"> 
+				</a>
+			</div>
+			<nav id="myNavbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="nosotros.php">NOSOTROS </a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" type="button" data-toggle="dropdown">PRODUCTOS
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#product">Materiales Granulares</a></li>
+							<li><a href="#prefabricados">Prefabricados</a></li>
+						</ul>
+					</li>
+					<li><a href="#ventajas">VENTAJAS</a></li>
+					<li><a href="#contact">CONTACTO </a></li>
+					<li class="logo-novo">
+						<a href="http://novoecoprefabricados.com/">
+							<img class="logo_bw" src="images/novo-wg-logo.svg" alt="logo novo ecoprefabricados">
+							<img class="logo_color" src="images/logo_novo_gg.svg" alt="logo novo ecoprefabricados">
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
     <!-- end header -->
 
 	<!-- Swiper-container -->
@@ -113,6 +120,22 @@
                         </div>
                         <div class="media-body">
                             <p> Nuestra excelente ubicación le permite ahorrar en gastos de transporte y tiempos de desplazamientos.</p>
+                        </div>
+                    </div>
+                    <div class="media-list">
+                        <div class="media-left pull-left ">
+                            <img class="media-object" src="images/icon_list_green.png" alt="...">
+                        </div>
+                        <div class="media-body">
+                            <p> Entregamos sus certificados de manera digital y en el menor tiempo posible</p>
+                        </div>
+                    </div>
+                    <div class="media-list">
+                        <div class="media-left pull-left ">
+                            <img class="media-object" src="images/icon_list_green.png" alt="...">
+                        </div>
+                        <div class="media-body">
+                            <p> Solicite su certificación aquí</p>
                         </div>
                     </div>
                 </div>
@@ -338,8 +361,44 @@
     <!-- Boton WP -->
 	<div class="floating-wpp"></div>
 
-	<!-- FOOTER -->
-    <div class="footer text-center">
+    <!-- FOOTER -->
+    <!-- footer -->
+	<img class="footer-separator" src="images/svg/footer-separator.svg" alt="">
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+				<img id="logo-reciclados" class="logo-footer" src="images/svg/reciclados-wg-logo.svg" alt="">
+                </div>
+                <div class="col-12 footer-menu">
+                    <a href="nosostros.php">Nosotros</a>
+                    <a href="index.php#prefabricados">Prefabricados</a>
+                    <a href="index.php#fondo_icons">Ventajas</a>
+                    <a href="index.php#contact">Contacto</a>
+                </div>
+                <div class="col-12 social">
+                    
+                    <a href="#"><img class="social-icon" src="images/svg/facebook-icon.svg" alt=""></a>
+                
+                    <a href="#"><img class="social-icon" src="images/svg/twitter-icon.svg" alt=""></a>
+                
+                    <a href="#"><img class="social-icon" src="images/svg/instagram-icon.svg" alt=""></a>
+                
+                    <a class="novo-footer" href="https://recicladosindustriales.co" target="_blank">
+						<span>Una marca de</span>
+						<img class="logo-footer" src="images/svg/novo-wg-logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-12 email">
+                    <p><img src="images/svg/mail-icon.svg" alt=""> info@novoecoprefabricados.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="eal-copy">
+            <p>Copyright © 2019 All Right Reserved. Powered By En Algún Lugar</p>
+        </div>
+    </footer>
+    <!-- <div class="footer text-center">
         <div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -349,7 +408,7 @@
 				</div>
 			</div>
 		</div>
-    </div>
+    </div> -->
 	<!-- END FOOTER -->
 
     <!-- scroll-top -->
