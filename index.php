@@ -764,10 +764,8 @@
 	<section id="video">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="videoWrapper videoWrapper169 js-videoWrapper">
-					<video id="video-reci" class="video-reci" src="reciclad_video.mp4" controls></video>
-					<!-- the poster frame - in the form of a button to make it keyboard accessible -->
-					<button class="videoPoster js-videoPoster" style="background-image:url(images/poster_video.jpg);" onclick="document.getElementById('video-reci').play()">Play video</button>
+				<div class="video-container">
+					<iframe src="https://player.vimeo.com/video/404625934?autoplay=1&loop=1&muted=1" frameborder="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>

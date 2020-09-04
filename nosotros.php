@@ -57,11 +57,11 @@
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#product">Materiales Granulares</a></li>
-							<li><a href="#prefabricados">Prefabricados</a></li>
+							<li><a href="index.php#product">Materiales Granulares</a></li>
+							<li><a href="index.php#prefabricados">Prefabricados</a></li>
 						</ul>
 					</li>
-					<li><a href="#ventajas">VENTAJAS</a></li>
+					<li><a href="index.php#ventajas">VENTAJAS</a></li>
 					<li><a href="#contact">CONTACTO </a></li>
 					<li class="logo-novo">
 						<a href="http://novoecoprefabricados.com/">
