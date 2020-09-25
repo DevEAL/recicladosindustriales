@@ -27,9 +27,9 @@ use PHPMailer\PHPMailer\Exception;
             // $mail->addAddress('ohlalaemprende@gmail.com');     // Add a recipient
             $mail->addAddress($email->value);             // Name is optional
             // $mail->addAddress('backend@enalgunlugarestudio.com');
-            // // Attachments
-            // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+            // Attachments
+            $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+            $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = utf8_decode($asunto);

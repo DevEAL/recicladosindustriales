@@ -28,9 +28,9 @@ class ModelCotizar {
                 'ri_name' => "'{$body['name']}'",
                 'ri_email' => "'{$body['email']}'",
                 'ri_material' => "'{$body['material']}'",
-                'ri_message' => "'{$body['message']}'",
+                'ri_cantidad' => "'{$body['cantidad']}'",
                 'ri_phone' => "'{$body['phone']}'",
-                'ri_cantidad' => "'{$body['cantidad']}'"
+                'ri_message' => "'{$body['message']}'"
             );
 
             $db->Insert($arrayBody);
@@ -46,7 +46,7 @@ class ModelCotizar {
                 if (SendMail::EriiarCorreo($asunto, $template)) {
                     return true;
                 } else {
-                    return array( 'email' => 'Template de eriio de correo' );
+                    return array( 'email' => 'Error de envio de correo' );
                 }
             }
          } catch (PDOException $e){

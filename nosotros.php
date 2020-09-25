@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/swiper.min.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/owl.carousel.min.css"/>
@@ -75,8 +76,21 @@
 	</header>
     <!-- end header -->
 
+    <!-- Video -->
+    <section id="video">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="videoWrapper videoWrapper169 js-videoWrapper">
+					<video id="video-reci" class="video-reci" src="reciclad_video.mp4" controls></video>
+					<!-- the poster frame - in the form of a button to make it keyboard accessible -->
+					<button class="videoPoster js-videoPoster" style="background-image:url(images/poster_video.jpg);" onclick="document.getElementById('video-reci').play()">Play video</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Swiper-container -->
-    <div class="swiper-container" id="home">
+    <!-- <div class="swiper-container" id="home">
         <div class="swiper-wrapper">
             <div class="swiper-slide center" style="background-image: url(images/bg_nosotros_opt.jpg);background-position: center right;">
 				<div class="overlay-bg">
@@ -88,7 +102,7 @@
 				</div>  
 			</div>
         </div>
-    </div>
+    </div> -->
     <!-- end swiper-container -->
 
 	<div id="disposicion">
@@ -135,12 +149,95 @@
                             <img class="media-object" src="images/icon_list_green.png" alt="...">
                         </div>
                         <div class="media-body">
-                            <p> Solicite su certificación aquí</p>
+                            <p class="btn-certify" onclick="document.getElementById('modalCertify').style.display='block'">Solicite su certificación aquí</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Modal Certificado -->
+        <div id="modalCertify" class="container-fluid modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button class="close" 
+                    onclick="document.getElementById('modalCertify').style.display='none'">
+                        <span>&times;</span>
+                    </button>
+                    <h2>Solicitud Certificado</h2>
+                    <form name="sentMessageCert" id="certifyForm" novalidate>
+                        <div class="column">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email *" class="form-control" id="emailCert" required data-validation-required-message="Ingrese su correo electronico">
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Teléfono * " class="form-control"  id="phoneCert" required data-validation-required-message="Ingrese su numero de teléfono">
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Nit *" class="form-control" id="nit" required 
+                                data-validation-required-message="Ingrese su Nit">
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Razón Social *" class="form-control" id="nameCorp" required data-validation-required-message="Ingrese su Razón Social">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Número contrato" class="form-control" id="contrato"  data-validation-required-message="Ingrese su Número de contrato">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre del Proyecto" class="form-control" id="proyecto"  data-validation-required-message="Ingrese su nombre de proyecto">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Pin ambiental" class="form-control" id="pin"  data-validation-required-message="Ingrese su pin ambiental">
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contratoIDU">Contrato IDU *</label>
+                            <select name="contratoIDU" id="selContrIdu" class="form-control" required>
+                                <option value="no">No</option>
+                                <option value="si">Si</option>
+                            </select>
+                            <p class="help-block text-danger"></p>
+                        </div>
+
+                        <div class="contratoIdu">
+                            <div class="form-group">
+                                <input type="text" placeholder="Periodo a Certificar" class="form-control" id="periodo"  data-validation-required-message="Ingrese su periodo a certificar">
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="valescan">Subir vales escaneados</label>
+                                <input type="file" name="vales" class="form-control" id="Vales"  data-validation-required-message="Ingrese el archivo no es válido" multiple>
+                                <p class="help-block text-danger"></p>
+                            </div>
+
+                            <textarea class="form-control" placeholder="Si los vales son de un tercero explicar la razón, anexar nit y razón social " rows="6" id="messageContrato"  data-validation-required-message="Por favor escriba su mensaje."></textarea>
+                        </div>
+
+                        <div class="alert alert-danger error mt-3">Error!  E-mail por favor revisé su correo electrónico</div>
+                        <div class="alert alert-success success">Su mensaje se ha enviado correctamente</div>
+                        <div class="submit">
+                            <input type="submit" value="Enviar" class="btn btn-default btn-esg" />
+                        </div>
+                        <p> <br>* Campos Obligatorios </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- fin Modal Certificado -->
     </section>
 
     <section id="parallax">
@@ -306,8 +403,8 @@
 				</div>
 			</div>
         </div>
-	</section>
-
+    </section>
+    
     <!-- MAP -->
     <section id="maps">
 		<div class="container">
@@ -418,7 +515,7 @@
     <!-- end scroll-top -->
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>

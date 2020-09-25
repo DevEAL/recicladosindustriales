@@ -424,7 +424,7 @@
   				<div class="col-md-6 texto-novo">
   					<p>Su mejor aliado para el <span>suministro de prefabricados de concreto</span>, producidos con materiales ambientalmente responsables, contribuyendo al cumplimiento de la normatividad y a la construcción de una ciudad más sostenible.</p>
 				</div>
-  				<div class="col-md-6 logo-novo">
+  				<div class="col-md-6 logo-novo social">
 					  <p>Ingresa a nuestra pagina web aquí:</p>
 					  <a href="http://novoecoprefabricados.com" target="_blank">
 						  <img src="images/logo_novo_gg.svg" alt="">
@@ -833,7 +833,7 @@
 										<p class="help-block text-danger"></p>
 										<div id="success"></div>
 										<div class="alert alert-danger error">Error!  E-mail por favor revisé su correo electrónico</div>
-										<div class="alert alert-success success">Su mensaje se ha enviado correctamente</div>
+										<div class="alert alert-success success">El mensaje se ha enviado correctamente, uno de nuestros asesores se contactará con usted lo antes posible</div>
 										<input type="submit" value="Enviar" class="btn btn-default btn-esg" />
 										<p><br>* Campos Obligatorios </p>
 									</div>
@@ -1197,7 +1197,7 @@
 									<input type="email" placeholder="Email *" class="form-control" name="email" id="emailSubscribe" required  >
 								</div>
 								<div id="subs-success" style="display:none;" class="alert alert-success success">
-									Su mensaje se ha enviado correctamente
+									El mensaje se ha enviado correctamente, uno de nuestros asesores se contactará con usted lo antes posible
 								</div>
 								<div id="subs-warning" style="display:none; " class="alert alert-warning warning">
 									Escriba su correo electronico
