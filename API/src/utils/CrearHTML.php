@@ -49,6 +49,25 @@ class CrearHTML {
             </div>
             ';
             break;
+          case 'Certificar':
+            $HTMLSection =
+            '
+            <div>
+              <p>Nombre contacto: <span>'.$body['contact'].'</span></p>
+              <p>Correo contacto: <span>'.$body['email'].'</span></p>
+              <p>Teléfono contacto: <span>'.$body['phone'].'</span></p>
+              <p>Nit: <span>'.$body['nit'].'</span></p>
+              <p>Razón Social: <span>'.$body['nameCorp'].'</span></p>
+              <p>Numero Contrato: <span>'.$body['contrato'].'</span></p>
+              <p>Nombre Proyecto: <span>'.$body['proyecto'].'</span></p>
+              <p>Pin Ambiental: <span>'.$body['pin'].'</span></p>
+              <p>Contacto IDU: <span>'.$body['selContrIdu'].'</span></p>
+              <p>Periodo a Certificar: <span>'.$body['periodo'].'</span></p>
+              <p>Vales: <span>'.$body['periodo'].'</span></p>
+              <p>Mensaje: <span>'.$body['selContrIdu'].'</span></p>
+            </div>
+            ';
+            break;
         }
         $HTMLFinish =
             '

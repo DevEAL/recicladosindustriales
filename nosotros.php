@@ -202,6 +202,10 @@
                             <input type="text" placeholder="Pin ambiental" class="form-control" id="pin"  data-validation-required-message="Ingrese su pin ambiental">
                             <p class="help-block text-danger"></p>
                         </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nombre de Contacto" class="form-control" id="contact"  data-validation-required-message="Ingrese nombre de la persona de contacto">
+                            <p class="help-block text-danger"></p>
+                        </div>
 
                         <div class="form-group">
                             <label for="contratoIDU">Contrato IDU *</label>
@@ -212,15 +216,17 @@
                             <p class="help-block text-danger"></p>
                         </div>
 
+                        <label for="valescan">Periodo a Certificar *</label>
                         <div class="contratoIdu">
                             <div class="form-group">
-                                <input type="text" placeholder="Periodo a Certificar" class="form-control" id="periodo"  data-validation-required-message="Ingrese su periodo a certificar">
+                                <input type="date" name="Periodo" class="form-control" id="periodo" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
                                 <p class="help-block text-danger"></p>
                             </div>
 
                             <div class="form-group">
-                            <label for="valescan">Subir vales escaneados</label>
-                                <input type="file" name="vales" class="form-control" id="Vales"  data-validation-required-message="Ingrese el archivo no es válido" multiple>
+                            <label for="valescan">Subir vales escaneados *</label>
+                                <input type="file" name="vales" class="form-control" id="Vales"  data-validation-required-message="La extensión del archivo no es válido" multiple />
+                                <input type="hidden" name="Max-file-size" value="2000" data-validation-required-message="El tamaño del archivo no es válido">
                                 <p class="help-block text-danger"></p>
                             </div>
 
@@ -230,9 +236,10 @@
                         <div class="alert alert-danger error mt-3">Error!  E-mail por favor revisé su correo electrónico</div>
                         <div class="alert alert-success success">Su mensaje se ha enviado correctamente</div>
                         <div class="submit">
-                            <input type="submit" value="Enviar" class="btn btn-default btn-esg" />
+                            <input type="submit" value="Enviar" id="submitBtn" class="btn btn-default btn-esg" />
+                            <input type="button" value="Cerrar" id="closeBtn" class="btn btn-default btn-esg btn-close-hidden" />
                         </div>
-                        <p> <br>* Campos Obligatorios </p>
+                        <p> <br>* Campos Obligatorios</br> </p>
                     </form>
                 </div>
             </div>

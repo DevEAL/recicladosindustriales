@@ -83,6 +83,32 @@ $app->group('/ri', function () use ($app) {
         }
     });
 
+    $this->map(['GET'], '/Certificar', function(Request $request, Response $response){
+        $Controller = new ControllerCertificar();
+        $response = $Controller->SelectAll();
+
+        if ($response === false) {
+            PrintJson::print(404);
+        } else if (is_array($response)) {
+            PrintJson::print($response[0], 'Inscription', 'data', $response[1]);
+        } else {
+            PrintJson::print($response);
+        }
+    });
+
+    $this->map(['POST'], '/Certificar/Post', function(Request $request, Response $response){
+        $Controller = new ControllerCertificar();
+        $response = $Controller->Insert($request);
+
+        if ($response === false) {
+            PrintJson::print(404);
+        } else if (is_array($response)) {
+            PrintJson::print($response[0], 'Create', 'data', $response[1]);
+        } else {
+            PrintJson::print($response);
+        }
+    });
+
     $this->map(['GET'], '/Test', function(Request $request, Response $response){
         $rsp = array('greeting' => 'hello test');
         PrintJson::print(200, 'Hello', 'Test', $rsp);

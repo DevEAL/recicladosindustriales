@@ -17,6 +17,9 @@ require __DIR__ . '/../src/model/Contact.php';
 require __DIR__ . '/../src/controller/Cotizar.php';
 require __DIR__ . '/../src/model/Cotizar.php';
 
+require __DIR__ . '/../src/controller/Certificar.php';
+require __DIR__ . '/../src/model/Certificar.php';
+
 require __DIR__ . '/../src/controller/enlaces.php';
 require __DIR__ . '/../src/model/enlaces.php';
 

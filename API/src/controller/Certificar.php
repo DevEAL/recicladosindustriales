@@ -1,11 +1,11 @@
 <?php
 
-class ControllerCotizar {
+class ControllerCertificar {
     public $model;
 
     public function __construct()
     {
-        $this->model = new ModelCotizar();
+        $this->model = new ModelCertificar();
     }
     public function SelectAll () {
         $response = $this->model->SelectAll();

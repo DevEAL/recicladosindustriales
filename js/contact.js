@@ -18,7 +18,8 @@ $(document).ready(function() {
         if (isValidEmail(dataString.email) && (dataString.message.length > 1) && (dataString.name.length > 1)) {
             $.ajax({
                 type: "POST",
-                url: "https://recicladosindustriales.co/API/public/ri/Contact/Post",
+                // url: "https://recicladosindustriales.co/API/public/ri/Contact/Post",
+                url: "../API/public/ri/Contact/Post",
                 dataType: "json",
                 data: dataString,
                 success: function () {
@@ -54,7 +55,8 @@ $(document).ready(function() {
         } else if (isValidEmail(dataString.email)) {
             $.ajax({
                 type: "POST",
-                url: "https://recicladosindustriales.co/API/public/ri/Inscripcion/Post",
+                // url: "https://recicladosindustriales.co/API/public/ri/Inscripcion/Post",
+                url: "../API/public/ri/Inscripcion/Post",
                 dataType: "json",
                 data: dataString,
                 success: function () {
@@ -108,7 +110,8 @@ $(document).ready(function() {
         if (isValidEmail(dataString.email) && (dataString.name.length > 1)) {
             $.ajax({
                 type: "POST",
-                url: "https://recicladosindustriales.co/API/public/ri/Cotizar/Post",
+                // url: "https://recicladosindustriales.co/API/public/ri/Cotizar/Post",
+                url: "../API/public/ri/Cotizar/Post",
                 dataType: "json",
                 data: dataString,
                 success: function () {
@@ -125,6 +128,7 @@ $(document).ready(function() {
         return false;
     });
 
+    /* Formulario certificados */
     /* Formulario certificados condicional */
     $(function() {
         $('.contratoIdu').hide();
@@ -134,6 +138,10 @@ $(document).ready(function() {
         });
     });
      /* Fin formulario certificados condicional */
+     /* Almacenamiento de archivos */
+     var datos = new FormData();
+     datos.append('archivo', $('#Vales')[0].files[0]);
+     /* Fin Almacenamiento de archivos */
     $("#certifyForm").submit(function (e) {
         e.preventDefault();
 
@@ -145,10 +153,11 @@ $(document).ready(function() {
             contrato:   $("#contrato").val(),
             proyecto:   $("#proyecto").val(),
             pin:        $('#pin').val(),
-            selContrIdu:$('#contratoIdu').val(),
+            contact:    $('#contact').val(),
+            selContrIdu:$('#selContrIdu').val(),
             periodo:    $('#periodo').val(),
-            vales:      $('#vales').val(),
-            message:    $('#mensaje').val()
+            vales:      "",
+            message:    $('#messageContrato').val()
         }
 
         function isValidEmail(emailAddress) {
@@ -159,7 +168,8 @@ $(document).ready(function() {
         if (isValidEmail(dataString.email) && (dataString.phone.length > 1) && (dataString.nit.length > 1)) {
             $.ajax({
                 type: "POST",
-                // url: "https://recicladosindustriales.co/API/public/ri/Cotizar/Post",
+                // url: "https://test.recicladosindustriales.co/API/public/ri/Certificar/Post",
+                url: "../API/public/ri/Certificar/Post",
                 dataType: "json",
                 data: dataString,
                 success: function () {
@@ -168,7 +178,10 @@ $(document).ready(function() {
             });
 
             $('#certifyForm .success').fadeIn(1000);            
-            document.getElementById("certifyForm").reset();
+            $("#certifyForm")[0].reset();
+            $("#closeBtn").addClass("btn-close-block");
+            $("#submitBtn").addClass("btn-close-hidden");
+            $("#closeBtn").removeClass("btn-close-hidden");
         } else {
             $('#certifyForm .error').fadeIn(1000);
             $('#certifyForm .success').fadeOut(500);
@@ -176,5 +189,13 @@ $(document).ready(function() {
         return false;
     });
     /* fin Formulario certificados */
-
+    /* Botón cerrar formulario certificados */
+    $('#closeBtn').click(function() {
+        $("#submitBtn").removeClass("btn-close-hidden");
+        $("#closeBtn").addClass("btn-close-hidden");
+        $("#closeBtn").removeClass("btn-close-block");
+        $("#modalCertify").css('display','none');
+        $(".success").css('display', 'none');
+    });
+    /* Fin Botón cerrar formulario certificados */
   }); //end document ready

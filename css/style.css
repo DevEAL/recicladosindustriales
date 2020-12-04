@@ -1251,7 +1251,11 @@ p{ font-size: 15px;
     color: white;
     padding: 0.5vw 5vw;
 }
-/*-- FORMULARIO CERTIFICADOS --*/
+#modalCertify #periodo, #modalCertify #selContrIdu { width: 30%; }
+#modalCertify #Vales { width: 43%; }
+#modalCertify .btn-close-hidden { display: none; }
+#modalCertify .btn-close-block { display: block; }
+/*-- FIN FORMULARIO CERTIFICADOS --*/
 
 
 /* FOOTER */
