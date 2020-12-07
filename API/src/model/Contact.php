@@ -36,12 +36,18 @@ class ModelContact {
 
             $asunto = 'Contacto ' . $id;
 
+            $db = new Entity('ri_parameters');
+            $db->select('ri_value as value')
+                ->where('ri_name = "Email_contacto" AND ri_status = 1');
+            $sth = $db->execute();
+            $email = $sth->fetch(PDO::FETCH_OBJ);
+
             $template = CrearHTML::Html($body, $asunto, 'contact');
 
             if (empty($template)) {
                 return array( 'template' => 'Template error' );
             } else {
-                if (SendMail::EriiarCorreo($asunto, $template)) {
+                if (SendMail::EriiarCorreo($asunto, $template, $email)) {
                     return true;
                 } else {
                     return array( 'email' => 'Error de envio de correo' );

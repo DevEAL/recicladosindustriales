@@ -346,7 +346,7 @@ p{ font-size: 15px;
     font-weight: 500;
     color: #99be32;
 }
-.swiper-container .swiper-wrapper .swiper-slide .overlay-bg .atention .btn-cotizar button{
+.swiper-container .swiper-wrapper .swiper-slide .overlay-bg .atention .btn-cotizar button {
     font-family: 'Open sans', sans-serif;
     width: 30%;
     font-size: 2rem;
@@ -1232,6 +1232,24 @@ p{ font-size: 15px;
 /*-- SUSCRIBE --*/
 
 /* FORMULARIO CERTIFICADOS */
+#btnSecCertificados {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+}
+#btnSecCertificados button.btn-certify {
+    font-family: 'Open sans', sans-serif;
+    font-size: 2rem;
+    padding: 10px 20px;
+    background: #99be32;
+    transition: all 0.2s ease;
+    color: white;
+}
+#btnSecCertificados .btn-certify:focus, #btnSecCertificados .btn-certify:hover {
+    color: #9abd3e; 
+    background-color: transparent; 
+    border: 1px solid #9abd3e; border-radius: 4px;
+}
 .btn-certify { cursor: pointer; }
 .btn-certify:hover { color: red; font-weight: 800;}
 #modalCertify {
@@ -1255,6 +1273,7 @@ p{ font-size: 15px;
 #modalCertify #Vales { width: 43%; }
 #modalCertify .btn-close-hidden { display: none; }
 #modalCertify .btn-close-block { display: block; }
+#modalCertify #err-block { display: none; }
 /*-- FIN FORMULARIO CERTIFICADOS --*/
 
 

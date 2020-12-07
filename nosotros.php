@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/swiper.min.css"/>
-    <link rel="stylesheet" href="css/animate.css"/>
-    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Oswald:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="chatWp/floating-wpp.min.css">
-    <link rel="stylesheet" href="css/style.css"/> 
-    <link rel="stylesheet" href="css/responsive.css"/>
-    <title>Reciclados Industriales</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142690761-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-142690761-1');
-    </script>
+	<!-- IE Compatibility Meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- First Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reciclados Industriales</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/swiper.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+	integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"  crossorigin="anonymous">
+    <link href="kartik-fileinput-51/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="kartik-fileinput-51/themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Oswald:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="chatWp/floating-wpp.min.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142690761-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-142690761-1');
+	</script>
+
 </head>
 <body>
 
@@ -37,7 +48,7 @@
     <!-- end load-wrapp -->
 
     <!-- header -->
-    <header id="main-header" class="header navbar">
+	<header id="main-header" class="header navbar">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
@@ -45,7 +56,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="./index.php">
+				<a class="navbar-brand" href="/index.php">
 					<img src="images/logo_reciclad.svg" class="img-responsive pic-1" alt="logo"> 
 					<img src="images/logo_reciclad.svg" class="img-responsive pic-2" alt="logo"> 
 				</a>
@@ -58,11 +69,11 @@
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="index.php#product">Materiales Granulares</a></li>
-							<li><a href="index.php#prefabricados">Prefabricados</a></li>
+							<li><a href="#product">Materiales Granulares</a></li>
+							<li><a href="#prefabricados">Prefabricados</a></li>
 						</ul>
 					</li>
-					<li><a href="index.php#ventajas">VENTAJAS</a></li>
+					<li><a href="#ventajas">VENTAJAS</a></li>
 					<li><a href="#contact">CONTACTO </a></li>
 					<li class="logo-novo">
 						<a href="http://novoecoprefabricados.com/">
@@ -144,14 +155,13 @@
                             <p> Entregamos sus certificados de manera digital y en el menor tiempo posible</p>
                         </div>
                     </div>
-                    <div class="media-list">
-                        <div class="media-left pull-left ">
-                            <img class="media-object" src="images/icon_list_green.png" alt="...">
-                        </div>
-                        <div class="media-body">
-                            <p class="btn-certify" onclick="document.getElementById('modalCertify').style.display='block'">Solicite su certificación aquí</p>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <div id="btnSecCertificados" class="btn-sec-certificado mt-5">
+                <div class="btn">
+                    <button class="btn btn-certify" type="button" onclick="document.getElementById('modalCertify').style.display='block'">Solicite su certificación aquí</button>
+                    <!-- <button class="btn btn-cot-home" type="button" data-toggle="modal" data-target="#modalCertify">Solicite su certificación aquí</button> -->
+                    <!--  <p class="btn-certify" onclick="document.getElementById('modalCertify').style.display='block'">Solicite su certificación aquí</p> -->
                 </div>
             </div>
         </div>
@@ -225,8 +235,10 @@
 
                             <div class="form-group">
                             <label for="valescan">Subir vales escaneados *</label>
-                                <input type="file" name="vales" class="form-control" id="Vales"  data-validation-required-message="La extensión del archivo no es válido" multiple />
-                                <input type="hidden" name="Max-file-size" value="2000" data-validation-required-message="El tamaño del archivo no es válido">
+                                <input id="inputFile" type="file" class="file file-input">
+                                <div class="alert alert-danger" id="err-block" role="alert" multiple>
+                                    El formato de archivo no válido. Solo se admiten archivos: jpg, png, jepg o pdf
+                                </div>
                                 <p class="help-block text-danger"></p>
                             </div>
 
@@ -236,7 +248,7 @@
                         <div class="alert alert-danger error mt-3">Error!  E-mail por favor revisé su correo electrónico</div>
                         <div class="alert alert-success success">Su mensaje se ha enviado correctamente</div>
                         <div class="submit">
-                            <input type="submit" value="Enviar" id="submitBtn" class="btn btn-default btn-esg" />
+                            <input type="submit" value="Enviar" class="btn btn-default btn-esg" />
                             <input type="button" value="Cerrar" id="closeBtn" class="btn btn-default btn-esg btn-close-hidden" />
                         </div>
                         <p> <br>* Campos Obligatorios</br> </p>
@@ -522,6 +534,12 @@
     <!-- end scroll-top -->
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.5.1.min.js"></script>
+    <script src="kartik-fileinput-51/js/fileinput.min.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/js/plugins/piexif.min.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/js/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/js/locales/es.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/themes/fas/theme.min.js" type="text/javascript"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>

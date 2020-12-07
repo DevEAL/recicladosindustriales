@@ -138,6 +138,64 @@ $(document).ready(function() {
         });
     });
      /* Fin formulario certificados condicional */
+     /* Botón upload Files */
+    //  var files;
+    $("#inputFile").fileinput({
+        browseLabel: 'Subir archivo...',
+        previewFileIcon: '<i class="fas fa-file"></i>',
+        showUpload:false,
+        previewFileType:'any',
+        allowedFileExtensions: ["jpg", "png", "jpeg", "pdf", "zip", "rar"],
+        elerrorContainer: '#err-block',
+        maxFileSize: 10240,
+        uploadUrl: '/Files/Certificados',
+        enableResumableUpload: true,
+        initialPreviewAsData: true,
+        fileActionSettings: {
+            showZoom: function(config) {
+                if (config.type === 'pdf' || config.type === 'image') {
+                    return true;
+                }
+                return false;
+            }
+        },
+        theme: 'explorer',
+        language: 'es',
+        preferIconPreview: true,
+        previewFileIconSettings: {
+            'pdf' : '<i class = "fas fa-file-pdf text-danger"> </i>' ,
+            'jpg' : '<i class = "fas fa-file-image text-success"> </i>' ,
+            'jpeg' : '<i class = "fas fa-file-image text-success"> </i>' ,
+            'zip': '<i class="fas fa-file-archive text-muted"></i>',
+            'png' : '<i class = "fas fa-file-image text-primary"> </i>'
+        },
+        previewFileExtSettings: {
+            'zip': function(ext) {
+                return ext.match(/(zip|rar|tar|gzip|gz|7z)$/i);
+            },
+            'jpg': function(ext) {
+                return ext.match(/(jp?g|png|gif|bmp)$/i);
+            },
+            'pdf': function(ext) {
+                return ext.match(/(pdf)$/i);
+            },
+        }
+    }).on('fileuploaded', function(event, previewId, index, fileId) {
+        console.log('File Uploaded', 'ID: ' + fileId + ', Thumb ID: ' + previewId);
+    }).on('fileuploaderror', function(event, previewId, index, fileId) {
+        console.log('File Upload Error', 'ID: ' + fileId + ', Thumb ID: ' + previewId);
+    }).on('filebatchpreupload', function(event, data) {
+        var n = data.files.length, files = n > 1 ? n + ' files' : 'one file';
+        if (!window.confirm("Está seguro que desea cargar: " + files + "?")) {
+            return {
+                message: "Carga cancelada!", // upload error message
+                data:{} // any other data to send that can be referred in `filecustomerror`
+            };
+        }
+    }).on('filebatchuploadcomplete', function(event, preview, config, tags, extraData) {
+        console.log('File Batch Uploaded', preview, config, tags, extraData);
+    });
+    /* fin Botón upload Files */
      /* Almacenamiento de archivos */
      var datos = new FormData();
      datos.append('archivo', $('#Vales')[0].files[0]);
@@ -156,7 +214,7 @@ $(document).ready(function() {
             contact:    $('#contact').val(),
             selContrIdu:$('#selContrIdu').val(),
             periodo:    $('#periodo').val(),
-            vales:      "",
+            vales:      this.data.files,
             message:    $('#messageContrato').val()
         }
 
@@ -188,7 +246,6 @@ $(document).ready(function() {
         }
         return false;
     });
-    /* fin Formulario certificados */
     /* Botón cerrar formulario certificados */
     $('#closeBtn').click(function() {
         $("#submitBtn").removeClass("btn-close-hidden");
@@ -198,4 +255,6 @@ $(document).ready(function() {
         $(".success").css('display', 'none');
     });
     /* Fin Botón cerrar formulario certificados */
-  }); //end document ready
+    
+    /* fin Formulario certificados */
+}); //end document ready
