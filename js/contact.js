@@ -18,7 +18,6 @@ $(document).ready(function() {
         if (isValidEmail(dataString.email) && (dataString.message.length > 1) && (dataString.name.length > 1)) {
             $.ajax({
                 type: "POST",
-                // url: "https://recicladosindustriales.co/API/public/ri/Contact/Post",
                 url: "../API/public/ri/Contact/Post",
                 dataType: "json",
                 data: dataString,
@@ -55,7 +54,6 @@ $(document).ready(function() {
         } else if (isValidEmail(dataString.email)) {
             $.ajax({
                 type: "POST",
-                // url: "https://recicladosindustriales.co/API/public/ri/Inscripcion/Post",
                 url: "../API/public/ri/Inscripcion/Post",
                 dataType: "json",
                 data: dataString,
@@ -110,7 +108,6 @@ $(document).ready(function() {
         if (isValidEmail(dataString.email) && (dataString.name.length > 1)) {
             $.ajax({
                 type: "POST",
-                // url: "https://recicladosindustriales.co/API/public/ri/Cotizar/Post",
                 url: "../API/public/ri/Cotizar/Post",
                 dataType: "json",
                 data: dataString,
@@ -129,7 +126,7 @@ $(document).ready(function() {
     });
 
     /* Formulario certificados */
-    /* Formulario certificados condicional */
+    /* Condicional */
     $(function() {
         $('.contratoIdu').hide();
 
@@ -137,69 +134,17 @@ $(document).ready(function() {
             ($(this).val() == "si") ? $('.contratoIdu').show() : $('.contratoIdu').hide();
         });
     });
-     /* Fin formulario certificados condicional */
+     /* Fin Condicional */
      /* Botón upload Files */
-    //  var files;
-    $("#inputFile").fileinput({
-        browseLabel: 'Subir archivo...',
-        previewFileIcon: '<i class="fas fa-file"></i>',
-        showUpload:false,
-        previewFileType:'any',
-        allowedFileExtensions: ["jpg", "png", "jpeg", "pdf", "zip", "rar"],
-        elerrorContainer: '#err-block',
-        maxFileSize: 10240,
-        uploadUrl: '/Files/Certificados',
-        enableResumableUpload: true,
-        initialPreviewAsData: true,
-        fileActionSettings: {
-            showZoom: function(config) {
-                if (config.type === 'pdf' || config.type === 'image') {
-                    return true;
-                }
-                return false;
-            }
-        },
-        theme: 'explorer',
+    $('#inputFile').fileinput({
+        theme: 'explorer-fas',
         language: 'es',
-        preferIconPreview: true,
-        previewFileIconSettings: {
-            'pdf' : '<i class = "fas fa-file-pdf text-danger"> </i>' ,
-            'jpg' : '<i class = "fas fa-file-image text-success"> </i>' ,
-            'jpeg' : '<i class = "fas fa-file-image text-success"> </i>' ,
-            'zip': '<i class="fas fa-file-archive text-muted"></i>',
-            'png' : '<i class = "fas fa-file-image text-primary"> </i>'
-        },
-        previewFileExtSettings: {
-            'zip': function(ext) {
-                return ext.match(/(zip|rar|tar|gzip|gz|7z)$/i);
-            },
-            'jpg': function(ext) {
-                return ext.match(/(jp?g|png|gif|bmp)$/i);
-            },
-            'pdf': function(ext) {
-                return ext.match(/(pdf)$/i);
-            },
-        }
-    }).on('fileuploaded', function(event, previewId, index, fileId) {
-        console.log('File Uploaded', 'ID: ' + fileId + ', Thumb ID: ' + previewId);
-    }).on('fileuploaderror', function(event, previewId, index, fileId) {
-        console.log('File Upload Error', 'ID: ' + fileId + ', Thumb ID: ' + previewId);
-    }).on('filebatchpreupload', function(event, data) {
-        var n = data.files.length, files = n > 1 ? n + ' files' : 'one file';
-        if (!window.confirm("Está seguro que desea cargar: " + files + "?")) {
-            return {
-                message: "Carga cancelada!", // upload error message
-                data:{} // any other data to send that can be referred in `filecustomerror`
-            };
-        }
-    }).on('filebatchuploadcomplete', function(event, preview, config, tags, extraData) {
-        console.log('File Batch Uploaded', preview, config, tags, extraData);
+        uploadUrl: '../Files',
+        overwriteInitial: false,
+        initialPreviewAsData: true,
     });
     /* fin Botón upload Files */
-     /* Almacenamiento de archivos */
-     var datos = new FormData();
-     datos.append('archivo', $('#Vales')[0].files[0]);
-     /* Fin Almacenamiento de archivos */
+    /* Submit Formulario */
     $("#certifyForm").submit(function (e) {
         e.preventDefault();
 
@@ -213,7 +158,8 @@ $(document).ready(function() {
             pin:        $('#pin').val(),
             contact:    $('#contact').val(),
             selContrIdu:$('#selContrIdu').val(),
-            periodo:    $('#periodo').val(),
+            periodoIni: $('#periodoInicio').val(),
+            periodoFin: $('#periodoFin').val(),
             vales:      this.data.files,
             message:    $('#messageContrato').val()
         }
@@ -226,7 +172,6 @@ $(document).ready(function() {
         if (isValidEmail(dataString.email) && (dataString.phone.length > 1) && (dataString.nit.length > 1)) {
             $.ajax({
                 type: "POST",
-                // url: "https://test.recicladosindustriales.co/API/public/ri/Certificar/Post",
                 url: "../API/public/ri/Certificar/Post",
                 dataType: "json",
                 data: dataString,
@@ -246,6 +191,7 @@ $(document).ready(function() {
         }
         return false;
     });
+    /* Fin Submit Formulario */
     /* Botón cerrar formulario certificados */
     $('#closeBtn').click(function() {
         $("#submitBtn").removeClass("btn-close-hidden");
@@ -255,6 +201,5 @@ $(document).ready(function() {
         $(".success").css('display', 'none');
     });
     /* Fin Botón cerrar formulario certificados */
-    
     /* fin Formulario certificados */
 }); //end document ready

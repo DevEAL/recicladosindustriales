@@ -1256,7 +1256,6 @@ p{ font-size: 15px;
     background-color: rgba(0,0,0,0.8);
     overflow: scroll;
 }
-/* #modalCertify .column { column-count: 2; } */
 #modalCertify .close span { font-size: 30px; }
 #modalCertify .modal-content { padding: 1vw 2vw;}
 #modalCertify .modal-content h2 { text-align: center }
@@ -1269,11 +1268,17 @@ p{ font-size: 15px;
     color: white;
     padding: 0.5vw 5vw;
 }
-#modalCertify #periodo, #modalCertify #selContrIdu { width: 30%; }
+#modalCertify .periodo, #modalCertify #selContrIdu { width: 30%; }
+#modalCertify .posicion-fecha { display: flex; align-items: center; }
 #modalCertify #Vales { width: 43%; }
+#modalCertify .upload-vales { margin-top: 1vw; }
+#modalCertify .file-input .btn-primary.btn-file { background-color: #000000; }
+#modalCertify .file-input .fa-folder-open { color: #8FB536; }
 #modalCertify .btn-close-hidden { display: none; }
 #modalCertify .btn-close-block { display: block; }
 #modalCertify #err-block { display: none; }
+#modalCertify .file-drop-zone { min-height: 0; }
+#modalCertify .file-drop-zone .file-drop-zone-title { padding: 0; }
 /*-- FIN FORMULARIO CERTIFICADOS --*/
 
 

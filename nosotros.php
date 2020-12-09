@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Reciclados Industriales</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/bootstrap-337/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/swiper.min.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
@@ -177,6 +177,10 @@
                     <form name="sentMessageCert" id="certifyForm" novalidate>
                         <div class="column">
                             <div class="form-group">
+                                <input type="text" placeholder="Nombre de Contacto" class="form-control" id="contact" required  data-validation-required-message="Ingrese nombre de la persona de contacto">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
                                 <input type="email" placeholder="Email *" class="form-control" id="emailCert" required data-validation-required-message="Ingrese su correo electronico">
                                 <p class="help-block text-danger"></p>
                             </div>
@@ -199,21 +203,17 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Número contrato" class="form-control" id="contrato"  data-validation-required-message="Ingrese su Número de contrato">
+                            <input type="text" placeholder="Nombre de Contrato o Nombre proyecto" class="form-control" id="contrato"  data-validation-required-message="Ingrese su Número de contrato">
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Nombre del Proyecto" class="form-control" id="proyecto"  data-validation-required-message="Ingrese su nombre de proyecto">
+                            <input type="text" placeholder="Objeto del contrato" class="form-control" id="proyecto"  data-validation-required-message="Ingrese su nombre de proyecto">
                             <p class="help-block text-danger"></p>
                         </div>
 
                         <div class="form-group">
                             <input type="text" placeholder="Pin ambiental" class="form-control" id="pin"  data-validation-required-message="Ingrese su pin ambiental">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Nombre de Contacto" class="form-control" id="contact"  data-validation-required-message="Ingrese nombre de la persona de contacto">
                             <p class="help-block text-danger"></p>
                         </div>
 
@@ -226,23 +226,48 @@
                             <p class="help-block text-danger"></p>
                         </div>
 
-                        <label for="valescan">Periodo a Certificar *</label>
                         <div class="contratoIdu">
+                            <label for="valescan">Periodo a Certificar *</label>
                             <div class="form-group">
-                                <input type="date" name="Periodo" class="form-control" id="periodo" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
-                                <p class="help-block text-danger"></p>
+                                <div class="fechas">
+                                    <div class="posicion-fecha">
+                                        <label for="since" class="periodo">Desde</label>
+                                        <input type="date" name="PeriodoInicio" class="form-control periodo" id="periodoInicio" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="posicion-fecha">
+                                        <label for="since" class="periodo">Hasta</label>
+                                        <input type="date" name="PeriodoFin" class="form-control periodo" id="periodoFin" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                            <label for="valescan">Subir vales escaneados *</label>
-                                <input id="inputFile" type="file" class="file file-input">
-                                <div class="alert alert-danger" id="err-block" role="alert" multiple>
+                            <div class="form-group upload-vales">
+                            <label for="valescan">Subir de Soportes *
+                                                <br><small>Subir vales escaneados. Relación en excel, pdf o zip</small>
+                                                
+                            </label>
+                            <br>
+                            <div class="file-loading">
+                                <input id="inputFile" name="input-pr-rev[]" type="file" multiple
+                                    data-show-caption="false"
+                                    data-allowed-file-extensions='["jpg", "png", "jepg", "pdf", "zip", "rar", "7z", "xls", "xlsx"]'
+                                />
+                            </div>
+                                <!-- <input id="inputFile" type="file" class="file file-input" multiple
+                                    data-show-upload="false"
+                                    data-show-caption="true"
+                                    data-msg-placeholder="Seleccione archivos para subir..."
+                                    data-allowed-file-extensions='["jpg", "png", "jepg", "pdf", "zip", "rar", "7z"]'
+                                > -->
+                                <div class="alert alert-danger" id="err-block" role="alert">
                                     El formato de archivo no válido. Solo se admiten archivos: jpg, png, jepg o pdf
                                 </div>
                                 <p class="help-block text-danger"></p>
                             </div>
 
-                            <textarea class="form-control" placeholder="Si los vales son de un tercero explicar la razón, anexar nit y razón social " rows="6" id="messageContrato"  data-validation-required-message="Por favor escriba su mensaje."></textarea>
+                            <textarea class="form-control" placeholder="Si los vales están a nombre de un tercero, explicar la razón relacionando Nit y Razón Social" rows="6" id="messageContrato"  data-validation-required-message="Por favor escriba su mensaje."></textarea>
                         </div>
 
                         <div class="alert alert-danger error mt-3">Error!  E-mail por favor revisé su correo electrónico</div>
@@ -251,6 +276,7 @@
                             <input type="submit" value="Enviar" class="btn btn-default btn-esg" />
                             <input type="button" value="Cerrar" id="closeBtn" class="btn btn-default btn-esg btn-close-hidden" />
                         </div>
+                        <p> <br>Tenga en cuenta, que el tiempo de respuesta es de aproximadamente 8 días hábiles</br> </p>
                         <p> <br>* Campos Obligatorios</br> </p>
                     </form>
                 </div>
@@ -511,7 +537,7 @@
             </div>
         </div>
         <div class="eal-copy">
-            <p>Copyright © 2019 All Right Reserved. Powered By En Algún Lugar</p>
+            <p>Copyright © 2019 All Right Reserved. Powered <a href="www.enalgunlugarestudio.com" target="_blank">By En Algún Lugar</a></p>
         </div>
     </footer>
     <!-- <div class="footer text-center">
@@ -535,12 +561,12 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.5.1.min.js"></script>
-    <script src="kartik-fileinput-51/js/fileinput.min.js" type="text/javascript"></script>
-    <script src="kartik-fileinput-51/js/plugins/piexif.min.js" type="text/javascript"></script>
-    <script src="kartik-fileinput-51/js/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/js/fileinput.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/js/plugins/piexif.js" type="text/javascript"></script>
+    <script src="kartik-fileinput-51/js/plugins/sortable.js" type="text/javascript"></script>
     <script src="kartik-fileinput-51/js/locales/es.js" type="text/javascript"></script>
-    <script src="kartik-fileinput-51/themes/fas/theme.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="kartik-fileinput-51/themes/explorer-fas/theme.js" type="text/javascript"></script>
+    <script src="js/bootstrap-337/bootstrap.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
