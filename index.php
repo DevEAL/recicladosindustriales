@@ -80,13 +80,14 @@
 						<a class="dropdown-toggle" type="button" data-toggle="dropdown">PRODUCTOS
 							<span class="caret"></span>
 						</a>
-						<ul class="dropdown-menu">
-							<li><a href="#product">Materiales Granulares</a></li>
-							<li><a href="#prefabricados">Prefabricados</a></li>
+						<ul class="dropdown-menu tabMenu">
+                            <li class="tabli"><span class="tab_1">BASES</span></li>
+							<li class="tabli"><span class="tab_2">SUBBASES</span></li>
+							<li class="tabli"><span class="tab_3">MATERIALES SELECCIONADOS</span></li>
 						</ul>
 					</li>
 					<li><a href="#ventajas">VENTAJAS</a></li>
-					<li><a href="#contact">CONTACTO </a></li>
+					<li><a href="#contacto">CONTACTO </a></li>
 					<li class="logo-novo">
 						<a href="http://novoecoprefabricados.com/">
 							<img class="logo_bw" src="images/novo-wg-logo.svg" alt="logo novo ecoprefabricados">
@@ -191,169 +192,190 @@
 					</div>	
 				</div>
 			</div>
-			<div class="row">
-				<div class="owl-1 owl-carousel owl-theme">
+			<div class="row" id="sectionProducts">
+				<div class="tabsProduct">
+					<ul class="tabMenu tab__prd">
+						<li class="tabli"><span class="tab_1">BASES</span></li>
+						<li class="tabli"><span class="tab_2">SUBBASES</span></li>
+						<li class="tabli"><span class="tab_3">MATERIALES SELECCIONADOS</span></li>
+					</ul>
 
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/BASE_GRANULAR_TIPO_A.jpg" alt="">
-						<div class="cont_title">
-							<h3>BASE GRANULAR<br>TIPO A BG-A</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal5">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+					<div id="content-1" class="tabContent tab_1">
+						<div class="owl-1 owl-carousel owl-theme">
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/BASE_GRANULAR_TIPO_A.jpg" alt="">
+								<div class="cont_title">
+									<h3>BASE GRANULAR<br>TIPO A BG-A</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal1">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/BASE_GRANULAR_TIPO_B.jpg" alt="">
+								<div class="cont_title">
+									<h3>BASE GRANULAR<br>TIPO B BG-B</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal2">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/BASE_GRANULAR_TIPO_C.jpg" alt="">
+								<div class="cont_title">
+									<h3>BASE GRANULAR<br>TIPO C BG-C</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal3">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
 						</div>
 					</div>
+					<div id="content-2" class="tabContent tab_2">
+						<div class="owl-1 owl-carousel owl-theme">
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/sub-bases.jpg" alt="">
+								<div class="cont_title">
+									<h3>SUB BASE GRANULAR<br>TIPO A SBG-A</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal4">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
 
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/BASE_GRANULAR_TIPO_B.jpg" alt="">
-						<div class="cont_title">
-							<h3>BASE GRANULAR<br>TIPO B BG-B</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal6">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_TIPO_B.jpg" alt="">
+								<div class="cont_title">
+									<h3>SUB BASE GRANULAR<br>TIPO B SBG-B</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal5">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_GRANULAR_TIPO_C.jpg" alt="">
+								<div class="cont_title">
+									<h3>SUB BASE GRANULAR<br>TIPO C SBG-C</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal6">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_GRANULAR_TIPO_PEA_1.jpg" alt="">
+								<div class="cont_title">
+									<h3>SUB BASE GRANULAR ASFALTICA</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal7">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_GRANULAR_TIPO_PEA_1.jpg" alt="">
+								<div class="cont_title">
+									<h3>SUB BASE GRANULAR TIPO PEA</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
 						</div>
 					</div>
+					<div id="content-3" class="tabContent tab_3">
+						<div class="owl-1 owl-carousel owl-theme">
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/B_200.jpg" alt="">
+								<div class="cont_title">
+									<h3>MATERIAL GRANULAR DE MEJORAMIENTO</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal9">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
 
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/BASE_GRANULAR_TIPO_C.jpg" alt="">
-						<div class="cont_title">
-							<h3>BASE GRANULAR<br>TIPO C BG-C</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal3">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/B_400.jpg" alt="">
+								<div class="cont_title">
+									<h3>B 400</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal10">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/B_600.jpg" alt="">
+								<div class="cont_title">
+									<h3>B 600 </h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal11">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/arena_de_concreto.jpg" alt="">
+								<div class="cont_title">
+									<h3>ARENA</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal12">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/gravas_de_concreto.jpg" alt="">
+								<div class="cont_title">
+									<h3>GRAVAS-GRAVILLA</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal13">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/rajon.jpg" alt="">
+								<div class="cont_title">
+									<h3>GRAVA DE ESCOMBRO</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal14">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="images/IMGS_SLIDER_PRODUCTOS/rajon.jpg" alt="">
+								<div class="cont_title">
+									<h3>RAJON</h3>
+								</div>
+								<div class="cont_buttom">
+									<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal15">Ver Ficha</a></p>
+									<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
+								</div>
+							</div>
 						</div>
 					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/sub-bases.jpg" alt="">
-						<div class="cont_title">
-							<h3>SUB BASE GRANULAR<br>TIPO A SBG-A</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal1">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_TIPO_B.jpg" alt="">
-						<div class="cont_title">
-							<h3>SUB BASE GRANULAR<br>TIPO B SBG-B</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal2">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_GRANULAR_TIPO_C.jpg" alt="">
-						<div class="cont_title">
-							<h3>SUB BASE GRANULAR<br>TIPO C SBG-C</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal3">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<!-- Pendientes SUB BASE GRANULAR ASFALTICA -->
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/SUB_BASE_GRANULAR_TIPO_PEA_1.jpg" alt="">
-						<div class="cont_title">
-							<h3>SUB BASE GRANULAR TIPO PEA</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal4">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/B_200.jpg" alt="">
-						<div class="cont_title">
-							<h3>MATERIAL GRANULAR DE MEJORAMIENTO</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/B_400.jpg" alt="">
-						<div class="cont_title">
-							<h3>B 400</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4 btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/B_600.jpg" alt="">
-						<div class="cont_title">
-							<h3>B 600 </h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/arena_de_concreto.jpg" alt="">
-						<div class="cont_title">
-							<h3>ARENA</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal7">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/gravas_de_concreto.jpg" alt="">
-						<div class="cont_title">
-							<h3>GRAVAS-GRAVILLA</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/ARENA_ESCOMBRO_RCD.jpg" alt="">
-						<div class="cont_title">
-							<h3>ARENA ESCOMBRO</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal7">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
-					<!-- Pendiente GRAVA ESCOMBRO -->
-
-					<div class="item">
-						<img src="images/IMGS_SLIDER_PRODUCTOS/rajon.jpg" alt="">
-						<div class="cont_title">
-							<h3>RAJON</h3>
-						</div>
-						<div class="cont_buttom">
-							<p class="btn-text"><a href="" class="btn btn-5 btn-lg" type="button" data-toggle="modal" data-target="#myModal8">Ver Ficha</a></p>
-							<p class="btn-text"><a href="" class="btn btn-4  btn-lg" type="button" data-toggle="modal" data-target="#cotizarModalMate">Cotizar</a></p>
-						</div>
-					</div>
-
 				</div>
-
+				
 				<div class="my-owl-nav">
 					<span class="my-prev-button">
 						<i class="fas fa-chevron-circle-left" aria-hidden="true"></i>
@@ -362,7 +384,6 @@
 						<i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
 					</span>
 				</div>
-
 			</div>
 		</div>
 	</section>
@@ -941,76 +962,8 @@
 
 
 	<!-- Ventanas modales Materiales-->
-	<!-- SUB BASE GRANULAR A -->
-	<div id="myModal1" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-lg">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body">
-					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_A.pdf" frameborder="0" width="100%" height="600px">
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- SUB BASE GRANULAR B -->
-	<div id="myModal2" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-lg">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body">
-					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_B.pdf" frameborder="0" width="100%" height="600px">
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-  	</div>
-	<!-- SUB BASE GRANULAR C -->
-	<div id="myModal3" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-lg">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body">
-					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_C.pdf" frameborder="0" width="100%" height="600px">
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-  	</div>
-	<!-- SUB BASE GRANULAR PEA -->					
-	<div id="myModal4" class="modal fade" role="dialog">
-		<div class="modal-dialog modal-lg">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<div class="modal-body">
-					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_PEA.pdf" frameborder="0" width="100%" height="600px">
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- BASE GRANULAR A -->
-	<div id="myModal5" class="modal fade" role="dialog">
+	<div id="myModal1" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -1027,7 +980,7 @@
 		</div>
 	</div>
 	<!-- BASE GRANULAR B -->
-	<div id="myModal6" class="modal fade" role="dialog">
+	<div id="myModal2" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -1042,9 +995,162 @@
 				</div>
 			</div>
 		</div>
+  	</div>
+	<!-- BASE GRANULAR C -->
+	<div id="myModal3" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/1_3_Base_Granular_C.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	<!-- SUBSUBBASE GRANULAR A -->
+	<div id="myModal4" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_A.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SUBBASE GRANULAR B -->
+	<div id="myModal5" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_B.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SUBBASE GRANULAR C -->
+	<div id="myModal6" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_C.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SUBBASE GRANULAR ASFALTICA -->
+	<div id="myModal7" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/2_4_SubBase_Granular_ASFALTICA.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SUB BASE GRANULAR PEA -->				
+	<div id="myModal8" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/11_12_2019_RIC_FICHAS_TECNICAS_V1_SUB_BASE_GRANULAR_PEA.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MATERIAL MEJORAMIENTO-->
+	<div id="myModal9" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/4_1_Mat_de_Mejoramiento.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- B 400-->
+	<div id="myModal10" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/5_1_ Ficha_tecnica_B-400.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- B 600-->
+	<div id="myModal11" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/5_2_Ficha_tecnica_B-600.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- ARENA DE TRITURACIÓN -->
-	<div id="myModal7" class="modal fade" role="dialog">
+	<div id="myModal12" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -1061,7 +1167,7 @@
 		</div>
 	</div>
 	<!-- GRAVA DE TRITURACIÓN -->
-	<div id="myModal8" class="modal fade" role="dialog">
+	<div id="myModal13" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg">
 			<!-- Modal content-->
 			<div class="modal-content">
@@ -1070,6 +1176,40 @@
 				</div>
 				<div class="modal-body">
 					<embed src="pdf/grava_trituracion_ri_ft.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- GRAVA DE ESCOMBRO -->
+	<div id="myModal14" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/3_3_Grava_de_Escombro.pdf" frameborder="0" width="100%" height="600px">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- RAJON -->
+	<div id="myModal15" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<embed src="pdf/3_3_Grava_de_Escombro.pdf" frameborder="0" width="100%" height="600px">
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 					</div>

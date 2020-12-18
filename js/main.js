@@ -196,7 +196,6 @@ $(document).ready(function () {
   });
 });
 
-
 $(window).on("load",function (){
   $('.load-wrapp ').fadeOut(1900);  
 });
@@ -204,5 +203,42 @@ $(window).on("load",function (){
 $(document).ready(function() {
   
 });
+/* Pestañas de productos */
+// Tabs por defecto      
+(sessionStorage.getItem("tabMenu") == null) ? sessionStorage.setItem('tabMenu', 'tab_1') :  console.log('error');
 
+tabLi = document.querySelectorAll(".tabMenu li");
+tabs = document.querySelectorAll(".tabMenu li span");
 
+tabs.forEach(tab => {  
+                
+  tab.addEventListener('click', function(event) {
+
+    var anchor = document.getElementById('product').offsetTop;
+    window.scrollTo(0, anchor);
+
+    sessionStorage.setItem('tabMenu', tab.className);              
+
+    // Tab no activa
+    tabLi.forEach(t => {                       
+        t.setAttribute('class', 'tabLi');
+    })
+
+    tabContent = document.querySelectorAll(".tabContent");
+    tabContent.forEach(element => {
+
+      // Seleccionando la segunda clase
+      let className = (element) ? element.className.split(" ") : null;
+      // Ocultar o mostrar TabContent
+      (tab.className == className[1]) ? element.style.display = "block" : element.style.display = "none";
+      (tab.className == className[1]) ? tab.parentElement.setAttribute('class', 'tabLi active') : undefined;
+
+    });
+  })
+
+  activeTab = '.'+sessionStorage.getItem("tabMenu");         
+  (activeTab) ? document.querySelector(".tabMenu " + activeTab).click() : document.querySelector(
+  ".tabMenu .tab_1").click();
+        
+});
+/* Fin Pestañas de productos */

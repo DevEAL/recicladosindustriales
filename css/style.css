@@ -202,7 +202,14 @@ p{ font-size: 15px;
 .header .navbar-brand img{ width: 200px; }
 .header .navbar-brand .pic-2{ display: none; }
 .header .dropdown-menu { background: #231F20; }
-.dropdown-menu > li > a  { padding: 9px !important; }
+.dropdown-menu > li > a, .dropdown-menu > li > span { padding: 9px !important; }
+.dropdown-menu > li > span {
+    display: block;
+    clear: both;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    cursor: pointer;
+}
 .dropdown-menu > li > a:first-child:before { border: 2px solid transparent !important; }
 .nav .open > a { background-color: transparent !important; }
 .navbar-collapse {
@@ -215,7 +222,7 @@ p{ font-size: 15px;
     margin-top: 1.1%;
 }
 .navbar { min-height: 90px; background-color: rgba(0, 0, 0, 0.5); }
-.header .navbar-nav li a {
+.header .navbar-nav li a, .header .navbar-nav .tabLi span {
     color: #fff;
     font-size: 15px;
     font-weight: 300;
@@ -581,6 +588,41 @@ p{ font-size: 15px;
 /* VENTAJAS CORRECCION END*/
 
 /* PRODUST */
+/* Tabs */
+#sectionProducts { font-family: 'Montserrat', sans-serif; }
+.tab__prd {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    list-style-type: none;
+}
+.tab__prd li {
+    cursor: pointer;
+    float: left;
+    padding: 15px 50px;
+    margin: 0;
+}
+.tab__prd li:not(:nth-child(3)) { border-right: 1px dotted #58595B;}
+.tab__prd span {
+    padding: 12px 20px;
+}
+.tab__prd li.active {
+    color: #99be32;
+    font-weight: 800;
+}
+.tab__prd li:hover {
+    background: #58595B;
+    color: #fff;
+}
+.tabContent {
+    display: none;
+}
+.tab__prd {
+    margin: 15px 0 0;
+}
+/* fin Tabs */
 #product {
     padding-top: 2%;
     background-image: url(../images/bg_prefabricados_opt.jpg);
@@ -1268,6 +1310,7 @@ p{ font-size: 15px;
     color: white;
     padding: 0.5vw 5vw;
 }
+#modalCertify .periodo-cert { margin-bottom: 1vw; }
 #modalCertify .periodo, #modalCertify #selContrIdu { width: 30%; }
 #modalCertify .posicion-fecha { display: flex; align-items: center; }
 #modalCertify #Vales { width: 43%; }

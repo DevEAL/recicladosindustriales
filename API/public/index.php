@@ -7,6 +7,8 @@ require __DIR__ . '/../src/config/db.php';
 require __DIR__ . '/../src/utils/printJson.php';
 require __DIR__ . '/../src/utils/sedMail.php';
 require __DIR__ . '/../src/utils/CrearHTML.php';
+require __DIR__ . '/../src/utils/file-upload.php';
+require __DIR__ . '/../src/utils/file-delete.php';
 
 require __DIR__ . '/../src/controller/Inscripcion.php';
 require __DIR__ . '/../src/model/Inscripcion.php';

@@ -63,18 +63,18 @@
 			</div>
 			<nav id="myNavbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="nosotros.php">NOSOTROS </a></li>
+					<li><a href="#">NOSOTROS </a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" type="button" data-toggle="dropdown">PRODUCTOS
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#product">Materiales Granulares</a></li>
-							<li><a href="#prefabricados">Prefabricados</a></li>
+							<li><a href="/index.php#product">Materiales Granulares</a></li>
+							<li><a href="/index.php#prefabricados">Prefabricados</a></li>
 						</ul>
 					</li>
-					<li><a href="#ventajas">VENTAJAS</a></li>
-					<li><a href="#contact">CONTACTO </a></li>
+					<li><a href="/index.php#ventajas">VENTAJAS</a></li>
+					<li><a href="#contacto">CONTACTO</a></li>
 					<li class="logo-novo">
 						<a href="http://novoecoprefabricados.com/">
 							<img class="logo_bw" src="images/novo-wg-logo.svg" alt="logo novo ecoprefabricados">
@@ -160,8 +160,6 @@
             <div id="btnSecCertificados" class="btn-sec-certificado mt-5">
                 <div class="btn">
                     <button class="btn btn-certify" type="button" onclick="document.getElementById('modalCertify').style.display='block'">Solicite su certificación aquí</button>
-                    <!-- <button class="btn btn-cot-home" type="button" data-toggle="modal" data-target="#modalCertify">Solicite su certificación aquí</button> -->
-                    <!--  <p class="btn-certify" onclick="document.getElementById('modalCertify').style.display='block'">Solicite su certificación aquí</p> -->
                 </div>
             </div>
         </div>
@@ -177,7 +175,7 @@
                     <form name="sentMessageCert" id="certifyForm" novalidate>
                         <div class="column">
                             <div class="form-group">
-                                <input type="text" placeholder="Nombre de Contacto" class="form-control" id="contact" required  data-validation-required-message="Ingrese nombre de la persona de contacto">
+                                <input type="text" placeholder="Nombre de Contacto *" class="form-control" id="contact" required  data-validation-required-message="Ingrese nombre de la persona de contacto">
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
@@ -203,7 +201,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" placeholder="Nombre de Contrato o Nombre proyecto" class="form-control" id="contrato"  data-validation-required-message="Ingrese su Número de contrato">
+                            <input type="text" placeholder="Número de Contrato o Nombre proyecto" class="form-control" id="contrato"  data-validation-required-message="Ingrese su Número de contrato">
                             <p class="help-block text-danger"></p>
                         </div>
 
@@ -217,6 +215,22 @@
                             <p class="help-block text-danger"></p>
                         </div>
 
+                        <label for="periodo-cert">Periodo a Certificar *</label>
+                        <div class="form-group periodo-cert">
+                            <div class="fechas">
+                                <div class="posicion-fecha">
+                                    <label for="since" class="periodo">Desde</label>
+                                    <input type="date" name="PeriodoInicio" class="form-control periodo" id="periodoInicio" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="posicion-fecha">
+                                    <label for="since" class="periodo">Hasta</label>
+                                    <input type="date" name="PeriodoFin" class="form-control periodo" id="periodoFin" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="contratoIDU">Contrato IDU *</label>
                             <select name="contratoIDU" id="selContrIdu" class="form-control" required>
@@ -227,25 +241,9 @@
                         </div>
 
                         <div class="contratoIdu">
-                            <label for="valescan">Periodo a Certificar *</label>
-                            <div class="form-group">
-                                <div class="fechas">
-                                    <div class="posicion-fecha">
-                                        <label for="since" class="periodo">Desde</label>
-                                        <input type="date" name="PeriodoInicio" class="form-control periodo" id="periodoInicio" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="posicion-fecha">
-                                        <label for="since" class="periodo">Hasta</label>
-                                        <input type="date" name="PeriodoFin" class="form-control periodo" id="periodoFin" step="1" min="2000-01-01" value="<?php getDate(); ?>" data-validation-required-message="Ingrese su periodo a certificar">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="form-group upload-vales">
                             <label for="valescan">Subir de Soportes *
-                                                <br><small>Subir vales escaneados. Relación en excel, pdf o zip</small>
+                                <br><small>Subir vales escaneados. Relación en excel, pdf o zip</small>
                                                 
                             </label>
                             <br>
@@ -376,7 +374,7 @@
     </section>
 
     <!-- CONTACT  -->
-    <section id="contact" class="contact-area sec-padding">
+    <section id="contacto" class="contact-area sec-padding">
         <div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
